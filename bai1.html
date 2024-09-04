@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inputArr(n) {
+        let arr = [];
+        for (let i = 0; i <= n - 1; i++) {
+            let value = +prompt("Nhập giá trị trong mảng");
+            arr.push(value);
+        }
+        return arr;
+    }
+    function inputArr(n) {
+        let arr = []
+        for (let i = 0; i <= n - 1; i++) {
+            let value = +prompt("Nhap cac gia tri trong mang")
+            arr.push(value)
+        }
+        return arr
+    }
+    function age(arr){
+        let sum = 0;
+        let count = 0;
+        for (let i = 0; i < arr.length; i++){
+            if (i % 2 === 0 && arr[i] % 2 !== 0) {
+                sum += arr[i];
+                count++;
+            }
+        }
+        if (count > 0) {
+            return sum/count;
+        } else  {
+            return 'khong co so le o vi tri chan'
+        }
+    }
+    function age1() {
+        let n = +prompt("Nhap so luong phan tu cua mang (n <= 50)")
+        if (n > 50) {
+            console.log("So luong phan tu khong qua 50")
+            return;
+        }
+        let arr = inputArr(n)
+        let result = age(arr);
+        console.log(`Trung binh cong cua so le o vi tri chan la: ${result}`)
+    }
+    age1()
+
+
+</script>
+
+
+</body>
+</html>

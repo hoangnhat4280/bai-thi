@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sum(x) {
+        let sum = 0;
+        for (let i = 1; i < x; i++) {
+            if (x % i === 0) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+    function IntimateNumbers(a, b) {
+        return sum(a) === b && sum(b) === a;
+    }
+    let num1 = 220;
+    let num2 = 284;
+    if (IntimateNumbers(num1, num2)) {
+        console.log(`${num1} va ${num2} la cap so than thiet.`);
+    } else {
+        console.log(`${num1} va ${num2} khong phai cap so than thiet.`);
+    }
+</script>
+
+</body>
+</html>

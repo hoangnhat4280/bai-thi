@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sách</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Quản lý Sách</h1>
+    <form id="bookForm" style="margin-bottom: 20px;">
+        <label for="bookId">Mã số sách:</label>
+        <input type="text" id="bookId" required maxlength="5"><br><br>
+        <label for="bookName">Tên sách:</label>
+        <input type="text" id="bookName" required><br><br>
+        <label for="publicationYear">Năm xuất bản:</label>
+        <input type="number" id="publicationYear" required min="1000" max="9999"><br><br>
+        <label for="copies">Số quyển:</label>
+        <input type="number" id="copies" required min="0"><br><br>
+        <button type="button" onclick="addBook()">Thêm Sách</button>
+    </form>
+    <h2>Danh sách Sách</h2>
+    <table id="bookTable">
+        <thead>
+        <tr>
+            <th>Mã số sách</th>
+            <th>Tên sách</th>
+            <th>Năm xuất bản</th>
+            <th>Số quyển</th>
+            <th>Tình trạng</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="button-container">
+        <button onclick="showBooks()">Hiển thị sách</button>
+        <button onclick="showAvailableBooks()">Sách đã có</button>
+        <button onclick="showNewBooks()">Thêm sách mới</button>
+        <button onclick="borrowBook()">Mượn sách</button>
+        <button onclick="showMostBooks()">Sách nhiều nhất</button>
+    </div>
+</div>
+<script src="book.js"></script>
+</body>
+</html>
